@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: gray;
+    font-family: sans-serif;
+}
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar{
+    
+    height: 20px;
+    background:rgba(0, 41, 128, 0.623);
+    border-radius: 8px;
+    
+}
+.skill-per{
+ height: 20px;
+ background-color: black;
+ width: 0;
+ border-radius: 8px;
+ position: relative;
+ transition: 1s linear;
+ -webkit-transition: 1s linear;
+ -moz-transition: 1s linear;
+ -ms-transition: 1s linear;
+ -o-transition: 1s linear;
+}
+.skill-per::before{
+    content: attr(per);
+    color:white;
+    position: absolute;
+    background-color: green;
+    padding: 4px 6px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color:green;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    -webkit-transform: translateX(50%) rotate(45deg);
+    -moz-transform: translateX(50%) rotate(45deg);
+    -ms-transform: translateX(50%) rotate(45deg);
+    -o-transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
